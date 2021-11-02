@@ -1,0 +1,20 @@
+#server:
+#  port: 8080
+#  servlet:
+#    context-path: /main
+
+spring:
+  application:
+    name: stock
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/stock?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  batch:
+    jdbc:
+      initialize-schema: ALWAYS
